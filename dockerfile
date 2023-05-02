@@ -1,12 +1,11 @@
 FROM node:18-alpine
 
-WORKDIR /code
+WORKDIR /src
+COPY package.json package-lock.json /src/
+RUN npm install --production
 
+COPY . /src
 
+EXPOSE 5000
 
-COPY requirements.txt requirements.txt
-
-EXPOSE 8080
-
-COPY . .
-CMD ["node", "run"]
+CMD ["node", "server.js"]
