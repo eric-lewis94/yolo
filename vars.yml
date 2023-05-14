@@ -5,3 +5,18 @@ repo: "https://github.com/eric-lewis94/yolo.git"
 yolo_version: "master"
 #repo destination
 dest: "/home/eric/yolo"
+pre_tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes  tasks:
+    - name: Install git
+      include_role:
+        name: git    - name: Clone git repository
+      git:
+        repo: "{{ repo }}"
+        version: "{{ yolo_version }}"
+        dest: "{{ dest }}"    - name: Install docker and docker-compose
+      include_role:
+        name: docker    - name: Run docker compose
+      include_role:
+        name: docker-compose
