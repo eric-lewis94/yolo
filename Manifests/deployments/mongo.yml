@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: yolo-db
-          image: mongo:jammy
+          image: mongo:6-jammy
           env:
             - name: MONGO_DB
               value: yolomy
