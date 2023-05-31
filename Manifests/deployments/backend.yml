@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: yolo-backend
-          image: yolo-backend
+          image: munjirue/yolo-backend_img:v1.0.0.1
           env:
             - name: MONGODB_URI
               value: mongodb://yolo-db:27017/yolomy
