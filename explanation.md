@@ -4,3 +4,9 @@
 4 created docker and docker compose file 
 5 created the images
 6 pushed images to docker hub
+
+creted manifest file 
+updated both service and deployment 
+cloned the repo under gke
+created cluster and deploy the resources
+created services
